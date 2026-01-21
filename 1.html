@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Page</title>
+</head>
+<body>
+
+    <h1> Welcome to Facebook </h1>
+    <p>Scroll and Enjoy.</p>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+  }
+
+  header {
+    background: #1877f2;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .container {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .column {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .left, .right {
+    width: 25%;
+  }
+
+  .middle {
+    width: 50%;
+  }
+
+  img.profile-pic {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  input, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background: #1877f2;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #145dbf;
+  }
+
+</style>
+</head>
+<body>
+
+<header>My Profile</header>
+
+<div class="container">
+  <!-- Left Column -->
+  <div class="column left">
+    <img src="WhatsApp Image 2026-01-21 at 10.22.48 AM.jpeg" alt="Profile Picture" class="profile-pic" id="profilePic">
+    <h3 id="userName">Love the Way you lie.  </h3>
+    
+  </div>
+
+  <!-- Middle Column -->
+  <div class="column middle">
+    <h3>Update Your Information</h3>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <input type="email" id="emailInput" placeholder="Enter your email">
+    <input type="text" id="picInput" placeholder="Enter profile image URL">
+    <button onclick="updateProfile()">Update Profile</button>
+  </div>
+
+  <!-- Right Column -->
+  <div class="column right">
+    <h3>Suggestions</h3>
+    <p>Abhishek</p>
+    <p>Ashish</p>
+    <p>Anmol </p>
+  </div>
+</div>
+
+<script>
+function updateProfile() {
+    const name = document.getElementById('nameInput').value;
+    const email = document.getElementById('emailInput').value;
+    const pic = document.getElementById('picInput').value;
+
+    if(name) document.getElementById('userName').innerText = name;
+    if(email) document.getElementById('userEmail').innerText = email;
+    if(pic) document.getElementById('profilePic').src = pic;
+
+    // Clear input fields after updating
+    document.getElementById('nameInput').value = '';
+    document.getElementById('emailInput').value = '';
+    document.getElementById('picInput').value = '';
+}
+</script>
+
+</body>
+</html>
